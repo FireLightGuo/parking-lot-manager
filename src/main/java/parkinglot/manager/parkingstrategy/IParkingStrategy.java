@@ -2,7 +2,7 @@ package parkinglot.manager.parkingstrategy;
 
 import parkinglot.Ticket;
 import parkinglot.Vehicle;
-import parkinglot.parkingboy.AbstractParkingBoy;
+import parkinglot.parkingboy.IParkingBoy;
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ import java.util.List;
  */
 public interface IParkingStrategy {
     // 选择一个停车仔去停车
-    Ticket park(Vehicle vehicle, List<AbstractParkingBoy> parkingBoys);
+    Ticket park(Vehicle vehicle, List<IParkingBoy> parkingBoys);
 }
