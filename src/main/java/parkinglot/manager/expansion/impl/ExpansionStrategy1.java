@@ -25,7 +25,7 @@ public class ExpansionStrategy1 implements IExpansionStrategy {
     @Override
     public void expand(List<IParkingBoy> parkingBoys) {
         for (IParkingBoy parkingBoy : parkingBoys) {
-            if (!ResourcePool.isEmpty()) {
+            if (ResourcePool.isEmpty()) {
                 break;
             }
             parkingBoy.addParkingLot(ResourcePool.pickParkingLot());

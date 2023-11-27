@@ -37,7 +37,7 @@ public class ExpansionStrategy2 implements IExpansionStrategy {
     public void expand(List<IParkingBoy> parkingBoys) {
         List<IParkingBoy> boysWithMinEmptyNum = getBoysWithMinEmptyNum(parkingBoys);
         for (IParkingBoy parkingBoy : boysWithMinEmptyNum) {
-            if (!ResourcePool.isEmpty()) {
+            if (ResourcePool.isEmpty()) {
                 break;
             }
             parkingBoy.addParkingLot(ResourcePool.pickParkingLot());
