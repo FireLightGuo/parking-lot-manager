@@ -1,5 +1,6 @@
 package parkinglot.manager.parkingstrategy.impl;
 
+import org.springframework.stereotype.Component;
 import parkinglot.exception.NoEnoughParkingSpotException;
 import parkinglot.Ticket;
 import parkinglot.Vehicle;
@@ -15,6 +16,7 @@ import java.util.List;
  * @author GuoWeiLiang
  * @since 2023/11/21 21:42
  */
+@Component
 public class ParkingStrategy3 implements IParkingStrategy {
     @Override
     public Ticket park(Vehicle vehicle, List<IParkingBoy> parkingBoys) {
